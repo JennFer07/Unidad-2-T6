@@ -1,0 +1,117 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f7f7;
+  color: #454545;
+}
+
+header {
+  background-color: #1ed3e0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  color: #0e8494;
+  font-size: 48px;
+  font-family: 'Rock Salt', cursive;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  font-weight: 300;
+  color: #000000;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #7A7A7A;
+}
+.Pilas p, .Colas p, .Listas p, .Arbol p {
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.Pilas h1 {
+  color: #34A85A;
+  font-style: italic; 
+}
+
+.Colas h1 {
+  color: #a83e91;
+  font-style: oblique; 
+}
+
+.Listas h1 {
+  color: #FF9800;
+  font-style: italic;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Arbol h1 {
+  color: #2196F3;
+  font-style: oblique;
+  font-weight: bold; 
+}
+
+
+.Colas p {
+  color: #f71faf;
+}
+
+.Listas p {
+  color: #FFC107;
+}
+
+.Arbol p {
+  color: #3F51B5;
+}
+
+.Pilas {
+  border-top: 5px solid #34A85A;
+}
+
+.Colas {
+  border-top: 5px solid #d856b1;
+}
+
+.Listas {
+  border-top: 5px solid #FF9800;
+}
+
+.Arbol {
+  border-top: 5px solid #2196F3;
+}
+
+@media (max-width: 768px) {
+  .Pilas, .Colas, .Listas, .Arbol {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Unidad 2</title>
+    <link rel="shortcut icon" href="./IMG/img/7422372_visualstudio_visual_developer_code_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/index.css">
+    <header>
+        <h1>Examen Unidad 2</h1>
+      </header>      
+<body>
+    <div class="Pilas">
+        <h1>Pila</h1>
+        <h2>¿Qué es Pila?</h2>
+        <p>Una pila es una estructura para almacenar datos que opera de forma lineal y unidireccional. Esto significa que solo hay una forma para agregar elementos y estos se incorporan en un orden determinado en una sola dirección.</p>
+        <h2>¿Cuándo usarla?</h2>
+        <p>Las pilas son útiles cuando necesitamos una estructura de dato que terminaremos desplegando de forma cronológica de más a menos recientes (como por ejemplo una lista de últimos tweets o artículos). En este caso, el dato ingresado más recientemente es el primero que sacaremos y mostraremos.</p>
+    </div>
+
+    <div class="Colas">
+        <h1>Cola</h1>
+        <h2>¿Qué es una Cola?</h2>
+        <p>Una cola es una estructura de datos muy similar a una Pila, es decir, también opera de forma lineal y unidireccional (se agregan elementos de inicio a fin). La gran diferencia radica en la forma en que estos elementos son sacados después. Cuando usamos una Pila, ésta opera con una modalidad LIFO (Last In First Out), mientras que con una Cola es FIFO (First In First Out), es decir, siempre el primer elemento que agreguemos, será el primero que saquemos de ella.</p>
+        <h2>¿Cuándo usarla?</h2>
+        <p>Dos de los usos más comunes de colas hoy en día están presentes en herramientas y procesos que vemos a diario: colas de tareas o trabajos (jobs), como por ejemplo Resque, Sidekiq o Kue, y colas de mensajería. En ambos casos, es necesario que los primeros datos que ingresen sean los primeros en salir y estén ordenados de forma cronológica y por orden de llegada.</p>
+    </div>
+
+    <div class="Listas">
+        <h1>Lista Enlazada Simple</h1>
+        <p>Una lista enlazada es una colección ordenada de elementos de datos. Un elemento de datos se puede representar como un nodo en una lista enlazada. Cada nodo consta de dos partes: datos y puntero al siguiente nodo.
+            A diferencia de los arreglos, los elementos de datos no se almacenan en ubicaciones contiguas. Los elementos o nodos de datos están vinculados mediante punteros, por lo que se denomina lista enlazada.
+            
+            Una lista enlazada tiene las siguientes propiedades:
+            •	Los nodos sucesivos están conectados por punteros.
+            •	El último nodo apunta a null.
+            •	En head Se mantiene el puntero que apunta al primer nodo de la lista.
+            •	Una lista vinculada puede crecer y reducirse durante la ejecución del programa.
+            •	Asigna memoria a medida que crece la lista. A diferencia de los arreglos, que tienen un tamaño fijo. Por lo tanto, el límite superior del número de elementos debe conocerse de antemano. Generalmente, la memoria asignada es igual al límite superior independientemente del uso. Ésta es una de las ventajas clave de usar una lista enlazada sobre un arreglo.
+            </p>
+        <h1>Lista Doble Enlazada</h1>
+        <h2>Ordenamiento</h2>
+        <p>La ordenación o clasificación de datos es una operación consistente, en disponer de un conjunto de datos en algún determinado orden, con respecto a uno de los campos de elementos del conjunto.</p>
+        <h2>Algoritmos Simple</h2>
+        <p>Considerados como los más sencillos, los algoritmos básicos son aquellos que se estructuran en base a bucles anidados.
+            En términos generales, un bucle exterior se encarga de recorrer cada uno de los elementos mientras que otro interno los compara entre sí. El modo en que se realiza esta comparación, es el que determina, y da nombre, a cada algoritmo.
+            </p>
+        <h2>Algoritmos Complejos</h2>
+        <p>Los algoritmos complejos son aquellos que resultan más efectivos cuanto mayor es el conjunto de datos inicial.
+            Los procedimientos difieren de un algoritmo a otro, pero por lo general, se suele fragmentar el conjunto inicial en subconjuntos más pequeños para trabajarlos de forma independiente.
+            </p>
+        <h1>Lista Enlazada Circular</h1>
+        <p>Una lista enlazada circular puede tener solo una dirección de referencia (como la lista enlazada) o una referencia doble como la lista doblemente enlazada. La única diferencia entre la lista enlazada circular y una lista enlazada es que el puntero next ( ) del último elemento tail.next no hace una referencia a null, sino al primer elemento ( head).</p>
+    </div >
+
+    <div class="Arbol">
+        <h1>Tree</h1>
+        <h2>¿Qué es un Arbol?</h2>
+        <p>Los árboles (trees) son una estructura de datos muy común, que se define de forma recursiva como una colección de nodos, empezando por un nodo raíz, donde cada nodo es una estructura de datos que contiene un valor, y opcionalmente una lista de referencias a otros nodos (sus hijos), con la limitación de que ninguna referencia esté duplicada, y que ninguno apunte al nodo raíz. </p>
+        
+        
+        <h2>EXPLICACION DEL CODIGO JS</h2>
+        
+        <h1>Nodos</h1>
+        <p>class Nodo {
+            constructor(valor) {
+              this.valor = valor;
+              this.derecha = null;
+              this.izquierda = null;
+            }
+          }
+          
+          
+          - Este es el constructor de la clase Nodo.
+          - Tiene tres propiedades:
+              - valor: El valor almacenado en el nodo.
+              - derecha: El nodo hijo derecho.
+              - izquierda: El nodo hijo izquierdo.
+          </p>
+        <h1>Clase Arbol</h1>
+        <p>class Arbol {
+            constructor() {
+              this.ruta = null;
+            }
+          
+          
+          - Este es el constructor de la clase Arbol.
+          - Tiene una propiedad:
+              - ruta: La raíz del árbol.
+          </p>
+        <h1>Método isEmpty()</h1>
+        <p>isEmpty() {
+            return this.ruta === null;
+          }
+          
+          
+          - Comprueba si el árbol está vacío.
+          - Retorna true si la raíz es null, false de lo contrario.
+          </p>
+        <h1>Método add(valor)</h1>
+        <p>add(valor) {
+            if (this.isEmpty()) {
+              this.ruta = new Nodo(valor);
+              return;
+            }
+            let aux = this.ruta;
+            while (aux) {
+              if (valor < aux.valor) {
+                if (aux.izquierda) {
+                  aux = aux.izquierda;
+                } else {
+                  aux.izquierda = new Nodo(valor);
+                  return;
+                }
+              } else {
+                if (aux.derecha) {
+                  aux = aux.derecha;
+                } else {
+                  aux.derecha = new Nodo(valor);
+                  return;
+                }
+              }
+            }
+          }
+          
+          
+          - Agrega un valor al árbol.
+          - Si el árbol está vacío, crea un nuevo nodo como raíz.
+          - De lo contrario, busca la posición adecuada para insertar el nuevo nodo.
+          </p>
+        <h1>Método mostrar()</h1>
+        <p>mostrar() {
+            let resultado = [];
+            this._inOrden(this.ruta, resultado);
+            return resultado;
+          }
+          
+          _inOrden(nodo, resultado) {
+            if (nodo !== null) {
+              this._inOrden(nodo.izquierda, resultado);
+              resultado.push(nodo.valor);
+              this._inOrden(nodo.derecha, resultado);
+            }
+          }
+          
+          
+          - Muestra el árbol en un recorrido en orden.
+          - Utiliza un método auxiliar _inOrden() para recorrer el árbol de manera recursiva.
+          </p>
+        <h1>Método buscar(valor)</h1>
+        <p>buscar(valor) {
+            let aux = this.ruta;
+            while (aux) {
+              if (valor === aux.valor) {
+                return aux; 
+              } else if (valor < aux.valor) {
+                aux = aux.izquierda;
+              } else {
+                aux = aux.derecha;
+              }
+            }
+            return null; 
+          }
+          
+          
+          - Busca un valor en el árbol.
+          - Retorna el nodo que contiene el valor si se encuentra, null de lo contrario.
+          </p>
+        <h1>Método eliminar(valor)</h1>
+        <p>eliminar(valor) {
+            this.ruta = this._eliminarNodo(this.ruta, valor);
+          }
+          
+          _eliminarNodo(nodo, valor) {
+            if (nodo === null) {
+              return nodo; 
+            }
+            if (valor < nodo.valor) {
+              nodo.izquierda = this._eliminarNodo(nodo.izquierda, valor);
+            } else if (valor > nodo.valor) {
+              nodo.derecha = this._eliminarNodo(nodo.derecha, valor);
+            } else {
+              // Caso 1: No tiene hijos
+              if (nodo.izquierda === null && nodo.derecha === null) {
+                return null;
+              } 
+              // Caso 2: Tiene un solo hijo izquierdo
+              else if (nodo.izquierda !== null && nodo.derecha === null) {
+                return nodo.izquierda;
+              } 
+              // Caso 3: Tiene un solo hijo derecho
+              else if (nodo.izquierda === null && nodo.derecha !== null) {
+                return nodo.derecha;
+              } 
+              // Caso 4: Tiene dos hijos
+              else {
+                let sucesor = this._minimo(nodo.derecha);
+                nodo.valor = sucesor.valor;
+                nodo.derecha = this._eliminarNodo(nodo.derecha, sucesor.valor);
+              }
+            }
+            return nodo;
+          }
+          
+          _minimo(nodo) {
+            let actual = nodo;
+            while (actual.izquierda !== null) {
+              actual = actual.iz
+          </p>
+    </div>
+    <script src="./Js/index.js"></script>
+</body>
+</html>
